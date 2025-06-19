@@ -1,9 +1,37 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "mythia";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #2b8878;
+  --color-primary-content: #fff;
+  --color-secondary: #389b84;
+  --color-secondary-content: #fff;
+  --color-accent: #d97736;
+  --color-accent-content: #fff;
+  --color-neutral: #052424;
+  --color-neutral-content: #fff;
+  --color-base-100: #fff;
+  --color-base-200: #f5f7f6;
+  --color-base-300: #e6e6e6;
+  --color-base-content: #052424;
+  --color-info: #389b84;
+  --color-success: #2b8878;
+  --color-warning: #d97736;
+  --color-error: #d97736;
+  --color-muted-dark: #4e6e74;
 }
+
+@layer utilities {
+  .text-muted-dark {
+    color: var(--color-muted-dark);
+  }
+}
+
+/* Removed custom :root and body overrides to allow DaisyUI theme colors to take effect */
 
 @theme inline {
   --color-background: var(--background);
