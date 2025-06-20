@@ -106,7 +106,7 @@ export default function LandingPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="input input-bordered w-full rounded-lg placeholder-black"
+                  className="input input-bordered w-full rounded-lg placeholder-black text-black"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -252,7 +252,7 @@ export default function LandingPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="input input-bordered w-full rounded-lg placeholder-black"
+                className="input input-bordered w-full rounded-lg placeholder-black text-black"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
