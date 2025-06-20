@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function LandingPage() {
   const [email, setEmail] = useState('');
@@ -50,7 +51,7 @@ export default function LandingPage() {
       {/* Top Navbar Section */}
       <nav className="navbar bg-base-100 shadow-md px-4 md:px-6 w-full flex justify-between items-center sticky top-0 z-50">
         <div className="flex items-center gap-3">
-          <img src="/mythia-logo.jpeg" alt="Mythia Logo" className="h-10 w-10 rounded-lg" />
+          <Image src="/mythia-logo.jpeg" alt="Mythia Logo" width={40} height={40} className="h-10 w-10 rounded-lg" />
           <span className="text-xl font-bold text-neutral tracking-tight">Mythia</span>
           <span className="badge badge-accent badge-sm ml-2">BETA</span>
         </div>
@@ -67,12 +68,14 @@ export default function LandingPage() {
         <div className="hero-content flex-col w-full max-w-4xl mx-auto relative">
           {/* Decorative logo background */}
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-            <img
+            <Image
               src="/mythia-logo.jpeg"
               alt=""
-              aria-hidden="true"
+              width={320}
+              height={320}
               className="w-56 h-56 md:w-80 md:h-80 rounded-full opacity-20 blur-sm"
               style={{ objectFit: 'cover' }}
+              aria-hidden="true"
             />
           </div>
           {/* Main content */}
@@ -82,7 +85,7 @@ export default function LandingPage() {
               Transform Your Life.
             </h1>
             <div className="py-6 md:text-xl text-base text-center text-black space-y-2">
-              <p>The word's best way to learn improv. It's funny, it's effective, and it's easy.</p>
+              <p>The world&apos;s best way to learn improv. It&apos;s funny, it&apos;s effective, and it&apos;s easy.</p>
               Learn improv today!
             </div>
             {!isSubmitted ? (
@@ -210,7 +213,7 @@ export default function LandingPage() {
               {/* Photo placeholder */}
               <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full bg-base-200 flex items-center justify-center overflow-hidden">
                 {/* Replace src with actual photo if available */}
-                <img src="/VeriDiogo.jpg" alt="Veri & Diogo" className="w-full h-full object-cover rounded-full" />
+                <Image src="/VeriDiogo.jpg" alt="Veri & Diogo" width={128} height={128} className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="flex-1">
                 <h3 className="text-l mb-2 text-black text-muted italic">June 2025</h3>
@@ -258,12 +261,14 @@ export default function LandingPage() {
       <footer className="w-full bg-base-100 border-t border-base-200 mt-auto relative overflow-hidden">
         {/* Background logo image */}
         <div className="absolute inset-0 w-full h-full z-0 flex justify-center items-center">
-          <img
+          <Image
             src="/mythia-logo.jpeg"
             alt=""
-            aria-hidden="true"
+            width={512}
+            height={512}
             className="w-full h-full max-w-2xl max-h-2xl object-cover opacity-20 blur-sm rounded-full"
             style={{ objectPosition: 'center' }}
+            aria-hidden="true"
           />
           {/* Radial gradient overlay for feathered edge */}
           <div className="absolute inset-0 pointer-events-none" style={{background: 'radial-gradient(circle, transparent 60%, #f3f4f6 100%)'}} />
@@ -271,7 +276,7 @@ export default function LandingPage() {
         {/* Footer content */}
         <div className="container px-4 md:px-6 mx-auto flex flex-col items-center justify-center py-6 gap-2 relative z-10">
           <div className="flex items-center gap-3 justify-center">
-            <img src="/mythia-logo.jpeg" alt="Mythia Logo" className="h-8 w-8 rounded-lg" />
+            <Image src="/mythia-logo.jpeg" alt="Mythia Logo" width={32} height={32} className="h-8 w-8 rounded-lg" />
             <span className="text-lg font-semibold text-neutral tracking-tight">Mythia</span>
             <span className="badge badge-accent badge-sm ml-2">BETA</span>
           </div>
@@ -289,24 +294,24 @@ function ExpandableStory() {
   const [expanded, setExpanded] = useState(false);
   const trimmed = [
     `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
-    `Our logic was flawless—at least on paper. Improv classes meant we'd have to interact, girls love this sort of thing (right?), and maybe, just maybe, we'd finally figure out how to not freeze up when someone said 'hi.'`,
+    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`,
     `Except, we were terrible...`
   ];
   const full = [
     `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
-    `Our logic was flawless—at least on paper. Improv classes meant we'd have to interact, girls love this sort of thing (right?), and maybe, just maybe, we'd finally figure out how to not freeze up when someone said 'hi.'`, 
+    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`, 
     `Except, we were terrible...`,
-    `We overthought every word, every gesture. We were terrified that if we let our guard down, people would see the real us—and that was a risk we weren't ready to take.`,
-    `So, we did what any overthinker would do: we went home and tried to practice. But improv isn't like learning guitar or chess.`,
-    <span className="font-bold" key="bold1">There weren't any good exercises online, nothing that made us want to come back, nothing that tracked our progress or kept us motivated.</span>,
+    `We overthought every word, every gesture. We were terrified that if we let our guard down, people would see the real us—and that was a risk we weren&apos;t ready to take.`,
+    `So, we did what any overthinker would do: we went home and tried to practice. But improv isn&apos;t like learning guitar or chess.`,
+    <span className="font-bold" key="bold1">There weren&apos;t any good exercises online, nothing that made us want to come back, nothing that tracked our progress or kept us motivated.</span>,
     `Our "streak" never lasted more than a day.`,
-    `A few months passed. We kept at it, mixing awkward classes with awkward solo drills. But something shifted. One night, a friend looked at us and said, "You're different." And we were.`,
+    `A few months passed. We kept at it, mixing awkward classes with awkward solo drills. But something shifted. One night, a friend looked at us and said, "You&apos;re different." And we were.`,
     <span className="font-bold" key="bold2">Suddenly, we were quicker, wittier, actually funny.</span>,
     `We could hold a room, riff off the cuff, and—maybe for the first time—felt at ease in our own skin. The pressure was gone.`,
     <span className="font-bold" key="bold3">We could breathe.</span>,
-    `That's when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
+    `That&apos;s when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
     `So, we built it.`,
-    `And in case you're wondering, yes—it works. (👰)`
+    `And in case you&apos;re wondering, yes—it works. (👰)`
   ];
   const story = expanded ? full : trimmed;
   return (
