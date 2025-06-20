@@ -330,8 +330,8 @@ function ExpandableStory() {
   const story = expanded ? full : trimmed;
   return (
     <div>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
       {story.map((para, idx) => (
+        // eslint-disable-next-line react/no-unescaped-entities
         <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
       ))}
       <button
