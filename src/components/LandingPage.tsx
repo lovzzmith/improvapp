@@ -7,10 +7,24 @@ export default function LandingPage() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement email collection logic
-    setIsSubmitted(true);
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
+      } else {
+        // Optionally, show a toast or error message here
+        alert('There was an error joining the waitlist. Please try again.');
+      }
+    } catch (err) {
+      // Optionally, show a toast or error message here
+      alert('There was a network error. Please try again.');
+    }
   };
 
   const benefits = [
