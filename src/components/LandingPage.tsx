@@ -104,7 +104,7 @@ export default function LandingPage() {
               </form>
             ) : (
               <div className="alert alert-success max-w-md mx-auto">
-                <span className="text-white">Thanks for joining! We'll be in touch soon.</span>
+                <span className="text-white">Thanks for joining! We&apos;ll be in touch soon.</span>
               </div>
             )}
             <div className="flex items-center justify-center gap-2 mt-3 text-sm">
@@ -165,7 +165,7 @@ export default function LandingPage() {
                   <span className="text-2xl">🧠</span> Instant Feedback, Real Growth
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Because without feedback, you're just guessing.</p>
+                  <p className="text-base text-black mt-1">Because without feedback, you&apos;re just guessing.</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
@@ -174,7 +174,7 @@ export default function LandingPage() {
                   <span className="text-2xl">📈</span> Track Your Progress. Keep Your Streak.
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Yes, this means beautiful dashboards, streak counters, and milestone badges. Hit a new personal best? We'll celebrate with you.</p>
+                  <p className="text-base text-black mt-1">Yes, this means beautiful dashboards, streak counters, and milestone badges. Hit a new personal best? We&apos;ll celebrate with you.</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
@@ -183,7 +183,7 @@ export default function LandingPage() {
                   <span className="text-2xl">📚</span> The Ultimate Improv Vault
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Unlock a treasure trove of improv wisdom: cheat sheets, expert video tutorials, pro tips, and deep-dive guides you won't find anywhere else.</p>
+                  <p className="text-base text-black mt-1">Unlock a treasure trove of improv wisdom: cheat sheets, expert video tutorials, pro tips, and deep-dive guides you won&apos;t find anywhere else.</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
@@ -250,7 +250,7 @@ export default function LandingPage() {
             </form>
           ) : (
             <div className="alert alert-success max-w-md mx-auto">
-              <span className="text-white">Thanks for joining! We'll be in touch soon.</span>
+              <span className="text-white">Thanks for joining! We&apos;ll be in touch soon.</span>
             </div>
           )}
           <p className="text-sm md:text-base text-black mt-4 leading-loose italic">No spam. Only important updates.</p>
