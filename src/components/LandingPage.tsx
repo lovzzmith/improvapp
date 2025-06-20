@@ -226,7 +226,7 @@ export default function LandingPage() {
               {/* Photo placeholder */}
               <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-full bg-base-200 flex items-center justify-center overflow-hidden">
                 {/* Replace src with actual photo if available */}
-                <Image src="/VeriDiogo.jpg" alt="Veri & Diogo" width={128} height={128} className="w-full h-full object-cover rounded-full" />
+                <Image src="/VeriDiogo.jpeg" alt="Veri & Diogo" width={128} height={128} className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="flex-1">
                 <h3 className="text-l mb-2 text-black text-muted italic">June 2025</h3>
