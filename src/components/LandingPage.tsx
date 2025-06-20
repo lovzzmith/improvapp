@@ -63,16 +63,16 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-base-100">
       {/* Top Navbar Section */}
-      <nav className="navbar bg-base-100 shadow-md px-4 md:px-6 w-full flex justify-between items-center sticky top-0 z-50">
+      <nav className="navbar bg-base-100 shadow-md px-4 md:px-6 w-full flex flex-row justify-between items-center sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <Image src="/mythia-logo.jpeg" alt="Mythia Logo" width={40} height={40} className="h-10 w-10 rounded-lg" />
           <span className="text-xl font-bold text-neutral tracking-tight">Mythia</span>
           <span className="badge badge-accent badge-sm ml-2">BETA</span>
         </div>
-        <div className="flex items-center gap-2">
-          <a href="#why-improv" className="font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Why Improv</a>
-          <a href="#features" className="font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Features</a>
-          <a href="#our-story" className="font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Our Story</a>
+        <div className="flex flex-row items-center gap-2">
+          <a href="#why-improv" className="hidden md:inline font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Why Improv</a>
+          <a href="#features" className="hidden md:inline font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Features</a>
+          <a href="#our-story" className="hidden md:inline font-semibold text-primary cursor-pointer px-3 py-1 rounded transition-colors duration-200 hover:text-black hover:bg-accent/20 focus:outline-none">Our Story</a>
           <a href="#join-waitlist" className="btn btn-primary font-semibold rounded-lg">Join Waitlist</a>
         </div>
       </nav>
