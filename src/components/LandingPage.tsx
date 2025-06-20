@@ -95,12 +95,11 @@ export default function LandingPage() {
           {/* Main content */}
           <div className="text-center w-full relative z-10">
             <h1 className="text-3xl sm:text-5xl xl:text-6xl/none font-bold text-neutral tracking-tighter">
-              Master Improv<br />
-              Transform Your Life.
+              Games People Play<br />
             </h1>
             <div className="py-6 md:text-xl text-base text-center text-black space-y-2">
-              <p>The world&apos;s best way to learn improv. It&apos;s funny, it&apos;s effective, and it&apos;s easy.</p>
-              Learn improv today!
+              <p>Because life doesn&apos;t hand out scripts.</p>
+              Learn to improv today!
             </div>
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -113,7 +112,7 @@ export default function LandingPage() {
                   required
                 />
                 <button type="submit" className="btn btn-primary whitespace-nowrap text-white rounded-lg">
-                  Get Early Access
+                  Join Waitlist
                 </button>
               </form>
             ) : (
@@ -161,31 +160,31 @@ export default function LandingPage() {
               <span className="text-primary text-base">Features</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral mb-8">
-              We built what we wish we had.
+              The world’s first improv app built for your everyday moments.
             </h2>
             <div className="space-y-6 mt-10 max-w-2xl mx-auto">
               <div className="collapse collapse-arrow shadow">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title flex items-center gap-3 text-lg font-bold text-black">
-                  <span className="text-2xl">🎲</span> Improv Games That Actually Work
+                  <span className="text-2xl">🎲</span> Improvise Your Real Life.
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Dive into our favorite improv games designed to get harder as you get better.</p>
+                  <p className="text-base text-black mt-1">Practice real conversations you actually face—not random skits. Every game is personalized to your world, so you get better where it matters most..</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title flex items-center gap-3 text-lg font-bold text-black">
-                  <span className="text-2xl">🧠</span> Instant Feedback, Real Growth
+                  <span className="text-2xl">🧠</span> Feedback That Makes You Sharper
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Because without feedback, you&apos;re just guessing.</p>
+                  <p className="text-base text-black mt-1">Stop guessing what works. Get instant, AI-powered feedback after every round, so you can see exactly how to level up—right now.</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
                 <input type="checkbox" className="peer" />
                 <div className="collapse-title flex items-center gap-3 text-lg font-bold text-black">
-                  <span className="text-2xl">📈</span> Track Your Progress. Keep Your Streak.
+                  <span className="text-2xl">📈</span> Progress You Can See (and Celebrate).
                 </div>
                 <div className="collapse-content text-left">
                   <p className="text-base text-black mt-1">Yes, this means beautiful dashboards, streak counters, and milestone badges. Hit a new personal best? We&apos;ll celebrate with you.</p>
@@ -197,7 +196,7 @@ export default function LandingPage() {
                   <span className="text-2xl">📚</span> The Ultimate Improv Vault
                 </div>
                 <div className="collapse-content text-left">
-                  <p className="text-base text-black mt-1">Unlock a treasure trove of improv wisdom: cheat sheets, expert video tutorials, pro tips, and deep-dive guides you won&apos;t find anywhere else.</p>
+                  <p className="text-base text-black mt-1">Unlock expert tips, cheat sheets, and video guides you won&apos;t find anywhere else.</p>
                 </div>
               </div>
               <div className="collapse collapse-arrow shadow">
@@ -216,7 +215,7 @@ export default function LandingPage() {
 
       {/* Personal Story Section */}
       <section id="our-story" className="container px-4 md:px-6 mx-auto py-8 md:py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex justify-center">
             <div className="inline-block rounded-xl bg-base-200 border border-base-200 border-[1px] px-2 py-2 mb-4">
               <span className="text-primary text-base">Our Story</span>
@@ -307,31 +306,35 @@ export default function LandingPage() {
 function ExpandableStory() {
   const [expanded, setExpanded] = useState(false);
   const trimmed = [
-    `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
-    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`,
-    `Except, we were terrible...`
+    'My mind goes blank. The room is waiting. I open my mouth—and nothing comes out.',
+    <span className="font-bold" key="bold0">{'That\'s when I realized: life doesn\'t wait for you to think of the perfect line.'}</span>
   ];
   const full = [
-    `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
-    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`, 
-    `Except, we were terrible...`,
-    `We overthought every word, every gesture. We were terrified that if we let our guard down, people would see the real us—and that was a risk we weren&apos;t ready to take.`,
-    `So, we did what any overthinker would do: we went home and tried to practice. But improv isn&apos;t like learning guitar or chess.`,
-    <span className="font-bold" key="bold1">There weren&apos;t any good exercises online, nothing that made us want to come back, nothing that tracked our progress or kept us motivated.</span>,
-    `Our "streak" never lasted more than a day.`,
-    `A few months passed. We kept at it, mixing awkward classes with awkward solo drills. But something shifted. One night, a friend looked at us and said, "You&apos;re different." And we were.`,
-    <span className="font-bold" key="bold2">Suddenly, we were quicker, wittier, actually funny.</span>,
-    `We could hold a room, riff off the cuff, and—maybe for the first time—felt at ease in our own skin. The pressure was gone.`,
-    <span className="font-bold" key="bold3">We could breathe.</span>,
-    `That&apos;s when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
-    `So, we built it.`,
-    `And in case you&apos;re wondering, yes—it works. (👰)`
+    'My mind goes blank. The room is waiting. I open my mouth—and nothing comes out.',
+    <span className="font-bold" key="bold0">{'That\'s when I realized: life doesn\'t wait for you to think of the perfect line.'}</span>,
+    'At this point I was the champion of rehearsing conversations in my head, only to trip over my own tongue when it actually mattered. Meetings, parties, even just ordering coffee felt like surprise tests I hadn\'t prepared for.',
+    'So, I signed up for improv. Not because I wanted to be an actor or anything, but because I wanted to get better at the real stuff—the conversations you can\'t see coming, the ones that suddenly put you on the spot, the ones that actually matter.',
+    'But improv classes alone weren\'t enough. After class, I\'d go home and look for ways to speed things up—books, YouTube videos, random advice threads. Most of it was dry, repetitive, or just plain boring. The exercises felt like chores, and nothing really stuck. I wanted to practice, but there was nothing out there that made me want to come back for more.',
+    <span className="font-bold" key="bold1">{'That first class? Total disaster.'}</span>,
+    'I overanalyzed everything, fumbled every punchline, and kept hoping someone would just hand me a script. Spoiler: they didn\'t.',
+    'But I kept going back. And, weirdly, something started to change. I listened more. I stopped trying to be clever and just tried to be present. The pressure to be funny faded away, and I started caring more about just showing up and being real.',
+    <span className="font-bold" key="bold2">{'I could finally breathe a little. I could actually enjoy the moment, instead of dreading it.'}</span>,
+    'Before I knew it, I was speaking up in meetings without rehearsing in my head first. I stopped fearing those curveball moments and started rolling with them. Friends noticed. \'You\'re different,\' someone said. And, honestly, I was.',
+    'That\'s when Veri—the only person I know who treats self-improvement like a competitive sport—asked what was up. We swapped stories, compared notes, and realized we\'d both been chasing the same thing: how to handle whatever life throws at us, even when we have no idea what\'s coming next.',
+    'We started practicing together, pushing each other, turning awkward moments into running jokes. The more we leaned in, the more we grew—not just solo, but as a team.',
+    <span className="font-bold" key="bold3">{'Because, let\'s face it, life doesn\'t hand out scripts. And maybe that\'s what makes it interesting.'}</span>,
+    'People kept asking what our secret was. We wanted to give them a shortcut, but improv isn\'t something you can just hand over. You have to try, mess up, and laugh at yourself along the way.',
+    'That\'s why we built Mythia. Not to make you a performer, but to help you find your voice when life goes off-script.'
   ];
   const story = expanded ? full : trimmed;
   return (
     <div>
       {story.map((para, idx) => (
-        <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
+        typeof para === 'string' ? (
+          <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
+        ) : (
+          <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
+        )
       ))}
       <button
         className="btn btn-link btn-xs text-primary px-0"
