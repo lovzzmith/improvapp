@@ -22,7 +22,7 @@ export default function LandingPage() {
         alert('There was an error joining the waitlist. Please try again.');
       }
     } catch (err) {
-      // Optionally, show a toast or error message here
+      console.error(err);
       alert('There was a network error. Please try again.');
     }
   };

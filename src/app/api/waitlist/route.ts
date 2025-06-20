@@ -17,6 +17,7 @@ export async function POST(req: Request) {
     await WaitlistEmail.create({ email });
     return NextResponse.json({ success: true });
   } catch (err) {
+    console.error(err);
     return NextResponse.json({ error: 'Email already registered or server error' }, { status: 400 });
   }
 } 
