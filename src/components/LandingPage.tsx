@@ -306,92 +306,38 @@ export default function LandingPage() {
 // ExpandableStory subcomponent
 function ExpandableStory() {
   const [expanded, setExpanded] = useState(false);
-
-  if (!expanded) {
-    return (
-      <div>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <p className="text-base md:text-lg text-black mb-2">
-          We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.
-        </p>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <p className="text-base md:text-lg text-black mb-2">
-          Our logic was flawless—at least on paper. Improv classes meant we'd have to interact, girls love this sort of thing (right?), and maybe, just maybe, we'd finally figure out how to not freeze up when someone said 'hi.'
-        </p>
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <p className="text-base md:text-lg text-black mb-2">
-          Except, we were terrible...
-        </p>
-        <button
-          className="btn btn-link btn-xs text-primary px-0"
-          onClick={() => setExpanded(true)}
-        >
-          Read More
-        </button>
-      </div>
-    );
-  }
-
+  const trimmed = [
+    `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
+    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`,
+    `Except, we were terrible...`
+  ];
+  const full = [
+    `We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.`,
+    `Our logic was flawless—at least on paper. Improv classes meant we&apos;d have to interact, girls love this sort of thing (right?), and maybe, just maybe, we&apos;d finally figure out how to not freeze up when someone said &apos;hi.&apos;`, 
+    `Except, we were terrible...`,
+    `We overthought every word, every gesture. We were terrified that if we let our guard down, people would see the real us—and that was a risk we weren&apos;t ready to take.`,
+    `So, we did what any overthinker would do: we went home and tried to practice. But improv isn&apos;t like learning guitar or chess.`,
+    <span className="font-bold" key="bold1">There weren&apos;t any good exercises online, nothing that made us want to come back, nothing that tracked our progress or kept us motivated.</span>,
+    `Our "streak" never lasted more than a day.`,
+    `A few months passed. We kept at it, mixing awkward classes with awkward solo drills. But something shifted. One night, a friend looked at us and said, "You&apos;re different." And we were.`,
+    <span className="font-bold" key="bold2">Suddenly, we were quicker, wittier, actually funny.</span>,
+    `We could hold a room, riff off the cuff, and—maybe for the first time—felt at ease in our own skin. The pressure was gone.`,
+    <span className="font-bold" key="bold3">We could breathe.</span>,
+    `That&apos;s when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
+    `So, we built it.`,
+    `And in case you&apos;re wondering, yes—it works. (👰)`
+  ];
+  const story = expanded ? full : trimmed;
   return (
     <div>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        We got into improv for the worst possible reason: to meet girls. Not that we were Casanovas—honestly, we could barely start a conversation with anyone, let alone a stranger.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        Our logic was flawless—at least on paper. Improv classes meant we'd have to interact, girls love this sort of thing (right?), and maybe, just maybe, we'd finally figure out how to not freeze up when someone said 'hi.'
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        Except, we were terrible...
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        We overthought every word, every gesture. We were terrified that if we let our guard down, people would see the real us—and that was a risk we weren't ready to take.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        So, we did what any overthinker would do: we went home and tried to practice. But improv isn't like learning guitar or chess.
-      </p>
-      <p className="text-base md:text-lg text-black mb-2 font-bold">
-        There weren't any good exercises online, nothing that made us want to come back, nothing that tracked our progress or kept us motivated.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        Our "streak" never lasted more than a day.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        A few months passed. We kept at it, mixing awkward classes with awkward solo drills. But something shifted. One night, a friend looked at us and said, "You're different." And we were.
-      </p>
-      <p className="text-base md:text-lg text-black mb-2 font-bold">
-        Suddenly, we were quicker, wittier, actually funny.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        We could hold a room, riff off the cuff, and—maybe for the first time—felt at ease in our own skin. The pressure was gone.
-      </p>
-      <p className="text-base md:text-lg text-black mb-2 font-bold">
-        We could breathe.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        That's when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        So, we built it.
-      </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <p className="text-base md:text-lg text-black mb-2">
-        And in case you're wondering, yes—it works. (👰)
-      </p>
+      {story.map((para, idx) => (
+        <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
+      ))}
       <button
         className="btn btn-link btn-xs text-primary px-0"
-        onClick={() => setExpanded(false)}
+        onClick={() => setExpanded((v) => !v)}
       >
-        Read Less
+        {expanded ? 'Read Less' : 'Read More'}
       </button>
     </div>
   );
