@@ -10,6 +10,7 @@ const config: Config = {
     extend: {},
   },
   plugins: [require("daisyui")],
+  // @ts-expect-error
   daisyui: {
     themes: [
       {
