@@ -323,7 +323,7 @@ function ExpandableStory() {
     <span className="font-bold" key="bold2">Suddenly, we were quicker, wittier, actually funny.</span>,
     `We could hold a room, riff off the cuff, and—maybe for the first time—felt at ease in our own skin. The pressure was gone.`,
     <span className="font-bold" key="bold3">We could breathe.</span>,
-    `That's when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
+    `That&#39;s when the questions started. Friends wanted to know our secret. Could we teach them? We tried, and this time, with a bit of guidance and feedback, they learned in half the time it took us.`,
     `So, we built it.`,
     `And in case you're wondering, yes—it works. (👰)`
   ];
@@ -331,7 +331,6 @@ function ExpandableStory() {
   return (
     <div>
       {story.map((para, idx) => (
-        // eslint-disable-next-line react/no-unescaped-entities
         <p key={idx} className="text-base md:text-lg text-black mb-2">{para}</p>
       ))}
       <button
