@@ -95,11 +95,11 @@ export default function LandingPage() {
           {/* Main content */}
           <div className="text-center w-full relative z-10">
             <h1 className="text-3xl sm:text-5xl xl:text-6xl/none font-bold text-neutral tracking-tighter">
-              Games People Play<br />
+              Life Doesn&apos;t Hand Out Scripts<br />
             </h1>
             <div className="py-6 md:text-xl text-base text-center text-black space-y-2">
-              <p>Because life doesn&apos;t hand out scripts.</p>
-              Learn to improv today!
+              <p>Practice real-life conversations, so you&apos;re ready for anything.</p>
+              Learn to improv the games people play!
             </div>
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
